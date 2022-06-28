@@ -18,6 +18,6 @@ FactoryBot.define do
     title { "MyString" }
     publication_at { "2022-06-27" }
     author_name { "Allan Poe" }
-    isbn_code { "AA123" }
+    sequence(:isbn_code) { |n| "AA123#{n}" }
   end
 end
