@@ -17,7 +17,7 @@ FactoryBot.define do
   factory :book do
     title { "MyString" }
     publication_at { "2022-06-27" }
-    author_name { "MyString" }
-    isbn_code { "MyString" }
+    author_name { "Allan Poe" }
+    isbn_code { "AA123" }
   end
 end

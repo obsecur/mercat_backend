@@ -22,12 +22,13 @@
 #
 FactoryBot.define do
   factory :address do
-    city { "MyString" }
-    country { "MyString" }
-    latitude { "9.99" }
-    longitude { "9.99" }
-    street_number { 1 }
-    zipcode { "MyString" }
-    street { "MyString" }
+    user
+    city { "London" }
+    country { "UK" }
+    latitude { 38.7160429 }
+    longitude { 62.2713069 }
+    street { "Brick Lane" }
+    street_number { 123 }
+    zipcode { "12345" }
   end
 end

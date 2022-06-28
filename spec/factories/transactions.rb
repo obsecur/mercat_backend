@@ -20,6 +20,8 @@
 #
 FactoryBot.define do
   factory :transaction do
+    user
+    book
     type { :order_book }
   end
 end
