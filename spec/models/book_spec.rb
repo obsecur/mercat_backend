@@ -15,6 +15,19 @@
 #
 require "rails_helper"
 
-RSpec.describe Book, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Book, type: :model do
+  subject(:book) { create(:book) }
+
+  describe "Validations" do
+    it { should validate_presence_of(:publication_at) }
+    it { should validate_presence_of(:status) }
+    it { should validate_presence_of(:title) }
+    it { should validate_uniqueness_of(:isbn_code).case_insensitive }
+  end
+
+  describe "Associations" do
+    it { should have_many(:user_books) }
+    it { should have_many(:users) }
+    it { should have_many(:transactions) }
+  end
 end
