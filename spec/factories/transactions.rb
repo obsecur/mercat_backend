@@ -23,5 +23,7 @@ FactoryBot.define do
     user
     book
     type { :order_book }
+    operation_at { Date.current }
+    expires_at { DateTime.current }
   end
 end

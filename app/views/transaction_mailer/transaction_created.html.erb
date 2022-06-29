@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Your borrowed book: <%= @book.title %> - <%= @book.author_name %> ISBN - <%= @book.isbn_code %> Date of Publication - <%= @book.publication_at.strftime('%b %d %Hh%M') %>
+    </h1>
+    <p>
+      Remember that you must return book at <%= @transaction.expires_at %>
+    </p>
+    <p>Good Luck!</p>
+  </body>
+</html>

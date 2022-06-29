@@ -30,5 +30,13 @@ class Transaction < ApplicationRecord
   # Validations
   validates :type,
             :operation_at,
+            :expires_at,
             presence: true
+
+  # Scopes & Callbacks
+  after_create :send_order_book_information
+
+  def send_order_book_information
+    TransactionMailer.transaction_created(self).deliver_now
+  end
 end

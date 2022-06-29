@@ -14,7 +14,7 @@
 #  updated_at     :datetime         not null
 #
 class Book < ApplicationRecord
-  enum status: { available: "available", pending: "pending", delivered: "delivered", returned: "returned" }
+  enum status: { available: "available", in_use: "in use", returned: "returned" }
 
   # Associations
   has_many :user_books
