@@ -8,7 +8,7 @@ module ExceptionHandlers
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
     rescue_from ActiveModel::ValidationError, with: :render_model_errors
-    # rescue_from BaseCommand::ExecutionError, with: :render_execution_errors
+    rescue_from BaseCommand::ExecutionError, with: :render_execution_errors
 
     private
       def render_unprocessable_entity(exception)
