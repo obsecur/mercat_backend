@@ -31,5 +31,6 @@ class Address < ApplicationRecord
             :longitude,
             :street,
             :street_number,
+            :zipcode,
             presence: true
 end
