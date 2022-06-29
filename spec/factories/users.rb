@@ -14,7 +14,8 @@
 FactoryBot.define do
   factory :user do
     name { "John Doe" }
-    email { "jdoe@email.com" }
+    sequence(:email) { |n| "jdoe#{n}@gmail.com" }
+
     phone { "+342343412" }
 
     trait :with_address do
